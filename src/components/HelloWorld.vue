@@ -6,6 +6,7 @@
   <div><button type="button" class="btn-primary btn">Lorem, ipsum dolor.</button></div>
 
   <Nav />
+  <font-awesome-icon icon="fa-solid fa-user-secret" />
 </template>
 
 <script>
