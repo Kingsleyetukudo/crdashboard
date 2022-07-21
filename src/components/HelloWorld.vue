@@ -4,10 +4,17 @@
     
   </div>
   <div><button type="button" class="btn-primary btn">Lorem, ipsum dolor.</button></div>
+
+  <Nav />
 </template>
 
 <script>
+
+import Nav from '../components/Navbar.vue'
 export default {
+  components: {
+    Nav
+  },
   name: 'HelloWorld',
   props: {
     msg: String
