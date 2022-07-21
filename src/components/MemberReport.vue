@@ -7,9 +7,7 @@
             <div class=" col-sm-12 col-md-6">
               <div class="d-flex justify-content-center">
                 <div class=" income col-12 border bg-primary text-white  rounded pb-3 pt-4">
-                  <div class="income-total ">
-                    <div class="logo"><img src="../assets/ethereum-small.png" ></div>
-                    <div class="middle">
+                  <div class="income ">
                     <h4 class="card-title">Total Income</h4>
                     <h3 class="card-text">$579,000</h3>
                     <p>Saved 25%</p>
@@ -58,7 +56,6 @@
       </div>
     </div>
   </div>
-  </div>
 
   
 </template>
@@ -68,35 +65,22 @@ export default {};
 </script>
 
 <style scoped>
-.logo{
-    position: relative;
-    border: 2px solid red;
-}
+.income:hover{
+     background-color: #3B76Ef;
+        background-image: url(../assets/ethereum-small.png) ;
+        background-repeat: no-repeat;
+        background-position: top right;
 
- .logo  img{
+        
+}
+ .income img{
     opacity: 1;
+    display: block;
+    width:100%;
     height: auto;
     transition: .5s ease;
     backface-visibility:hidden ;
  }
- .middle{
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% -50%);
-    -ms-transform: translate(-50% -50%);
-    text-align: center;
-    /* z-index: 1; */
- }
-
-    .income:hover{
-     background-color: #3B76Ef;
-        background-repeat: no-repeat;
-        background-position: top right;
-}
-
     .total{
         background-color: rgb(69, 180, 232);
         color: white;
@@ -104,6 +88,11 @@ export default {};
     }
     .total:hover{
         background-color: #3B76Ef;
+        background-image: url(../assets/ethereum-small.png) ;
+        background-repeat: no-repeat;
+        opacity: 1;
+        transition:  .5s ease;
+        backface-visibility: hidden;
     }
     .cash{
         background-color: #A66DD4;
@@ -111,6 +100,8 @@ export default {};
     }
     .cash:hover{
         background-color: #3B76Ef;
+        background-image: url(../assets/ethereum-small.png) ;
+        background-repeat: no-repeat;
     }
     .net{
         background-color: #6DD4B1;
@@ -118,5 +109,7 @@ export default {};
     }
     .net:hover{
          background-color: #3B76Ef;
+        background-image: url(../assets/ethereum-small.png) ;
+        background-repeat: no-repeat;
     }
 </style>
