@@ -4,10 +4,11 @@
       <div class="col-md-12 d-flex justify-content-center">
         <div class=" col-11 ">
           <div class="row">
-            <div class=" col-sm-12 col-md-6">
+
+            <div class=" col-sm-12 col-md-6 md-mb-3">
               <div class="d-flex justify-content-center">
-                <div class=" income col-12 border bg-primary text-white  rounded pb-3 pt-4">
-                  <div class="income ">
+                <div class=" income col-12 border rounded">
+                  <div class="income-total p-4">
                     <h4 class="card-title">Total Income</h4>
                     <h3 class="card-text">$579,000</h3>
                     <p>Saved 25%</p>
@@ -16,10 +17,10 @@
               </div>
             </div>
 
-            <div class="col-sm-12 mt-3 mt-md-0 col-md-6">
+            <div class="col-sm-12  col-md-6 mt-3 mt-lg-0">
               <div class="d-flex justify-content-center">
-                <div class=" total col-12 border rounded pb-3 pt-4">
-                  <div class="total-expense">
+                <div class=" total col-12 border  rounded">
+                  <div class="total-expense p-4">
                     <h4 class="card-title">Total Expense</h4>
                     <h3 class="card-text">$79,000</h3>
                     <p>Saved 25%</p>
@@ -28,10 +29,10 @@
               </div>
             </div>
 
-            <div class="col-sm-12 col-md-6 mt-3">
+            <div class="col-sm-12  col-md-6 mt-3">
               <div class="d-flex justify-content-center">
-                <div class=" cash col-12 border  rounded pb-3 pt-4">
-                  <div class="cash-hand">
+                <div class=" cash  col-12 border rounded">
+                  <div class="cash-hand  p-4">
                     <h4 class="card-title">Cash On Hand</h4>
                     <h3 class="card-text">$73</h3>
                     <p>Saved 25%</p>
@@ -42,8 +43,8 @@
 
             <div class="col-sm-12  col-md-6 mt-3">
               <div class="d-flex justify-content-center">
-                <div class=" net col-12 border rounded pb-3 pt-4">
-                  <div class="profit-margin">
+                <div class=" profit col-12 border rounded">
+                  <div class="profit-margin p-4">
                     <h4 class="card-title">Net Profit Margin</h4>
                     <h3 class="card-text">$214</h3>
                     <p>Saved 65%</p>
@@ -65,51 +66,59 @@ export default {};
 </script>
 
 <style scoped>
-.income:hover{
-     background-color: #3B76Ef;
+    .income{
         background-image: url(../assets/ethereum-small.png) ;
         background-repeat: no-repeat;
         background-position: top right;
-
-        
-}
- .income img{
-    opacity: 1;
-    display: block;
-    width:100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility:hidden ;
- }
-    .total{
-        background-color: rgb(69, 180, 232);
-        color: white;
-     
+        color: #fff;
     }
-    .total:hover{
-        background-color: #3B76Ef;
+    .income-total{
+        background-color:blue;
+        height: 100%;
+    }
+    .income-total:hover{
+        background-color:  #3b77efc8;
+    }
+
+     .total{
         background-image: url(../assets/ethereum-small.png) ;
         background-repeat: no-repeat;
-        opacity: 1;
-        transition:  .5s ease;
-        backface-visibility: hidden;
+        background-position: top right;
+        color: #fff;
+    }
+    .total-expense{
+        background-color:#61C2FE;
+        height: 100%;
+        
+    }
+    .total-expense:hover{
+        background-color:  #3b77efc8;
     }
     .cash{
-        background-color: #A66DD4;
-        color: white;
-    }
-    .cash:hover{
-        background-color: #3B76Ef;
-        background-image: url(../assets/ethereum-small.png) ;
+         background-image: url(../assets/ethereum-small.png) ;
         background-repeat: no-repeat;
+        background-position: top right;
+        color: #fff;
     }
-    .net{
-        background-color: #6DD4B1;
-        color: white;
+    .cash-hand{
+        background-color:#A66DD4;
+        height: 100%;
     }
-    .net:hover{
-         background-color: #3B76Ef;
-        background-image: url(../assets/ethereum-small.png) ;
+    .cash-hand:hover{
+         background-color:  #3b77efc8;
+    }
+    .profit{
+         background-image: url(../assets/ethereum-small.png) ;
         background-repeat: no-repeat;
+        background-position: top right;
+        color: #fff;
     }
+    .profit-margin{
+        background-color:#6DD4B1;
+        height: 100%;
+    }
+        .profit-margin:hover{
+         background-color:  #3b77efc8;
+    }
+    
 </style>
