@@ -1,8 +1,8 @@
 <template>
-  <div class="income-holder">
+  <!-- <div class="income-holder">
     <div class="row">
-      <div class="col-md-12 d-flex justify-content-center">
-        <div class=" col-11 ">
+      <div class="d-flex justify-content-center">
+        <div class=" col-11 "> -->
           <div class="row">
 
             <div class=" col-sm-12 col-md-6 md-mb-3">
@@ -17,7 +17,7 @@
               </div>
             </div>
 
-            <div class="col-sm-12  col-md-6 mt-3 mt-lg-0">
+            <div class="col-sm-12  col-md-6 mt-3 mt-md-0 rounded">
               <div class="d-flex justify-content-center">
                 <div class=" total col-12 border  rounded">
                   <div class="total-expense p-4">
@@ -53,7 +53,7 @@
               </div>
             </div>
           </div>
-        </div>
+        <!-- </div>
       </div>
       <div class="col-md-12 border" style="height: 60vh;">
         <pieChart 
@@ -62,7 +62,7 @@
       />
       </div>
     </div>
-  </div>
+  </div> -->
 
     
 </template>

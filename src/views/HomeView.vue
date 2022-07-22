@@ -1,18 +1,45 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="side-bar">
+      <Sidebar />
+    </div>
+    <div class="main-view">
+      <Nav />
+      <MemberReport />
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Nav from '../components/Navbar.vue'
+import Sidebar from '../components/SidebarNav.vue'
+import MemberReport from '../components/MemberReport.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    Nav,
+    Sidebar,
+    MemberReport
   }
 }
 </script>
+
+<style scoped>
+  .home {
+    background-color: #f7faff;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .side-bar {
+    width: 25%;
+  }
+
+  .main-view {
+    width: 75%;
+  }
+</style>
