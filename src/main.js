@@ -3,6 +3,7 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import Highcharts from 'highcharts';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 /* import the fontawesome core */
@@ -21,6 +22,7 @@ createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
 .use(store)
 .use(router)
+.use( Highcharts )
 .mount('#app')
 
 import 'bootstrap/dist/js/bootstrap.js'

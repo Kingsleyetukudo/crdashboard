@@ -55,14 +55,28 @@
           </div>
         </div>
       </div>
+      <div class="col-md-12 border" style="height: 60vh;">
+        <pieChart 
+        domId="chart1"
+        class="w-100 h-100"
+      />
+      </div>
     </div>
   </div>
 
-  
+    
 </template>
 
 <script>
-export default {};
+import pieChart from "../components/Balance.vue"
+export default {
+    components: {
+        pieChart,
+    },
+    setup() {
+        
+    },
+}
 </script>
 
 <style scoped>

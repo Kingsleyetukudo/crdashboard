@@ -1,72 +1,96 @@
 <template>
-    <div class="chart">
-        <div id="container"></div>
-    </div>
+  <div class="container-fluid">
+    <div :id="domId" style="height: 50vh"></div>
+  </div>
 </template>
 
 <script>
 import { ref, onMounted } from "vue";
+import Highcharts from "highcharts";
 export default {
-    name: "Chart",
-    setup() {
-        const chart = ref(null)
-        onMounted(() =>{
-            var highchartsOptions = {
-                chart: {
-                    plotBackgroundColor: null,
-                    plotBorderWidth: null,
-                    plotShadow: false,
-                    type: 'pie'
-                },
-                title: {
-                    text: 'Browser market shares at a specific website, 2014'
-                },
-                tooltip: {
-                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                },
-                accessibility: {
-                    point: {
-                    valueSuffix: '%'
-                    }
-                },
-                plotOptions: {
-                    pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    colors: pieColors,
-                    dataLabels: {
-                        enabled: true,
-                        format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
-                        distance: -50,
-                        filter: {
-                        property: 'percentage',
-                        operator: '>',
-                        value: 4
-                        }
-                    }
-                    }
-                },
-                series: [{
-                    name: 'Share',
-                    data: [
-                    { name: 'Chrome', y: 61.41 },
-                    { name: 'Internet Explorer', y: 11.84 },
-                    { name: 'Firefox', y: 10.85 },
-                    { name: 'Edge', y: 4.67 },
-                    { name: 'Safari', y: 4.18 },
-                    { name: 'Other', y: 7.05 }
-                    ]
-                }]
-            }
+  name: "balance",
+  props: ["domId"],
+  setup(props) {
+    const chart = ref(null);
+    
+    onMounted(() => {  
+      // Make monochrome colors
+      var pieColors = (function () {
+        var colors = [],
+          base = Highcharts.getOptions().colors[0],
+          i;
 
-            chart.value = new Highcharts.chart(highchartsOptions)
-        })
-        
-        return{
-                chart
+        for (i = 0; i < 10; i += 1) {
+          // Start out with a darkened base color (negative brighten), and end
+          // up with a much brighter color
+          colors.push(
+            Highcharts.color(base)
+              .brighten((i - 3) / 7)
+              .get()
+          );
         }
-    },
-}
+        return colors;
+      })();
+
+      var highchartsOptions = {
+        chart: {
+          plotBackgroundColor: null,
+          plotBorderWidth: null,
+          plotShadow: false,
+          type: "pie",
+          renderTo: props.domId,
+        },
+        title: {
+          text: "Browser market shares at a specific website, 2014",
+        },
+        tooltip: {
+          pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+        },
+        accessibility: {
+          point: {
+            valueSuffix: "%",
+          },
+        },
+        plotOptions: {
+          pie: {
+            allowPointSelect: true,
+            cursor: "pointer",
+            colors: pieColors,
+            dataLabels: {
+              enabled: true,
+              format: "<b>{point.name}</b><br>{point.percentage:.1f} %",
+              distance: -50,
+              filter: {
+                property: "percentage",
+                operator: ">",
+                value: 4,
+              },
+            },
+          },
+        },
+        series: [
+          {
+            name: "Share",
+            data: [
+              { name: "Chrome", y: 61.41 },
+              { name: "Internet Explorer", y: 11.84 },
+              { name: "Firefox", y: 10.85 },
+              { name: "Edge", y: 4.67 },
+              { name: "Safari", y: 4.18 },
+              { name: "Other", y: 7.05 },
+            ],
+          },
+        ],
+      };
+
+      chart.value = new Highcharts.chart(highchartsOptions);
+    });
+
+    return {
+      chart,
+    };
+  },
+};
 </script>
 
 <style scoped>
