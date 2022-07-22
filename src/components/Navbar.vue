@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-col d-flex justify-content-between align-items-center border">
+  <div class="nav-col d-flex justify-content-between align-items-center">
     <div class="search-bar-col">
         <div class="mobile-bar" @click="toggleNav">
             <img src="../assets/bars-solid.svg" class="img-fluid" alt="">
@@ -94,7 +94,8 @@ export default {
 
 .nav-col {
     border-radius: 5px;
-    padding: 2rem .5rem;
+    padding: 2rem;
+    background-color: #fff;
 }
 
 .search-bar-col {
@@ -148,7 +149,7 @@ li img {
 .search_field {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 70%;
     gap: 1rem;
     background-color: #f7faff;
     padding: .5rem 1rem;
@@ -220,14 +221,9 @@ input {
 }
 
 .count {
-    /* padding: .1rem; */
     background-color: red;
 }
 
-/* .search_icon img {
-    width: 100%;
-    height: 100%;
-}  */
 
 @media (max-width: 991px) {
     .mobile-bar {
