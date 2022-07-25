@@ -6,6 +6,7 @@
     <div class="main-view">
       <Nav />
       <MemberReport />
+      <PieChart domId="chart2" />
     </div>
   </div>
 </template>
@@ -15,13 +16,21 @@
 import Nav from '../components/Navbar.vue'
 import Sidebar from '../components/SidebarNav.vue'
 import MemberReport from '../components/MemberReport.vue'
+import PieChart from '../components/PieChart.vue'
 
 export default {
   name: 'HomeView',
   components: {
     Nav,
     Sidebar,
-    MemberReport
+    MemberReport,
+    PieChart
+  },
+
+  data() {
+    return {
+     
+    }
   }
 }
 </script>
@@ -29,7 +38,7 @@ export default {
 <style scoped>
   .home {
     background-color: #f7faff;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 2rem;
     display: flex;
     gap: 2rem;
@@ -41,5 +50,6 @@ export default {
 
   .main-view {
     width: 75%;
+    border: 1px solid red;
   }
 </style>

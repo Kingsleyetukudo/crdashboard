@@ -8,7 +8,7 @@
 import { ref, onMounted } from "vue";
 import Highcharts from "highcharts";
 export default {
-  name: "balance",
+  name: "pieChart",
   props: ["domId"],
   setup(props) {
     const chart = ref(null);

@@ -1,8 +1,5 @@
 <template>
-  <!-- <div class="income-holder">
-    <div class="row">
-      <div class="d-flex justify-content-center">
-        <div class=" col-11 "> -->
+
           <div class="row">
 
             <div class=" col-sm-12 col-md-6 md-mb-3">
@@ -52,23 +49,13 @@
                 </div>
               </div>
             </div>
-          </div>
-        <!-- </div>
-      </div>
-      <div class="col-md-12 border" style="height: 60vh;">
-        <pieChart 
-        domId="chart1"
-        class="w-100 h-100"
-      />
-      </div>
     </div>
-  </div> -->
 
-    
+
 </template>
 
 <script>
-import pieChart from "../components/Balance.vue"
+import pieChart from "./PieChart.vue"
 export default {
     components: {
         pieChart,
