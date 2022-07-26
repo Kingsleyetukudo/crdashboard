@@ -6,9 +6,7 @@
         </div>
 
         <div class="search_field rounded-pill">
-            <div class="search_icon">
-                <img src="../assets/magnifying-glass-solid.svg" class="img-fluid" alt="">
-            </div>
+            <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="top-icon"/>
             <input type="text" placeholder="search here..." class="w-100 p-2">
         </div>
     </div>
@@ -17,13 +15,13 @@
 
         <div class="notification">
             <div class="position-relative">
-                <img src="../assets/bell-regular.svg" class="img-fluid" alt=""> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count">+99</span>
+                <font-awesome-icon icon="fa-regular fa-bell" class="top-icon"/> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count">+99</span>
             </div>
         </div>
         
         <div class="message">
             <div class="position-relative">
-                <img src="../assets/comment-dots-regular.svg" alt=""> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count">+99</span>
+                <font-awesome-icon icon="fa-regular fa-comment-dots" class="top-icon"/> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count">+99</span>
             </div>
 
         </div>
@@ -54,7 +52,7 @@
    </div>
 
     <ul>
-        <li> <img src="../assets/house-solid.svg" alt=""> Dashboard</li>
+        <li> <font-awesome-icon icon="fa-solid fa-house" /> Dashboard</li>
         <li> <img src="../assets/file-lines-regular.svg" alt=""> Pages</li>
         <li><img src="../assets/file-lines-regular.svg" alt=""> Applications</li>
         <li><img src="../assets/file-lines-regular.svg" alt=""> UI Components</li>
@@ -107,12 +105,16 @@ export default {
 
 .mobile-nav-toggle-in {
     width: 350px;
+    height: 100vh;
     padding: 2rem;
-    position: absolute;
+    position: fixed;
+    z-index: 500;
     top: 0;
+    left: 0;
     border-right: 2px solid red;
     transition: all .8s ease;
     overflow: hidden;
+    background-color: #fff;
 }
 
 .mobile-nav-toggle-out {
@@ -130,6 +132,7 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    color: #a5adc6;
 }
 
 li {
@@ -150,7 +153,7 @@ li img {
     display: flex;
     align-items: center;
     width: 70%;
-    gap: 1rem;
+    gap: .5rem;
     background-color: #f7faff;
     padding: .5rem 1rem;
 }
@@ -193,10 +196,10 @@ input {
     border: none;
     outline: none;
     background-color: transparent;
-    color: #fff;
+    color: #000;
 }
 
-.search_icon, .close-icon  {
+.close-icon  {
     width: 25px;
     height: 25px;
 }
@@ -222,6 +225,11 @@ input {
 
 .count {
     background-color: red;
+}
+
+.top-icon {
+    font-size: 2em;
+    color: #929bb5;
 }
 
 
