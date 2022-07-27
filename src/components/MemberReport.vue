@@ -4,33 +4,41 @@
 
             <div class="income rounded">
               <div class="income-total text-holder rounded">
-                <h4 class="card-title">Total Income</h4>
-                  <h3 class="card-text"><Counter ref='counter' :startAmount='0' :endAmount='579000' :duration='10' prefix='&#8358;' suffix='' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true' @finished='alert(`Counting finished!`)'/></h3>
-                  <p>Saved 25%</p>
+                <div class="text">
+                  <h4 class="card-title">Net Profit Margin</h4>
+                    <h3 class="card-text"><Counter ref='counter' :startAmount='0' :endAmount='579000' :duration='10' prefix='&#8358;' suffix='' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true' @finished='alert(`Counting finished!`)'/></h3>
+                    <p>Saved 65%</p>
+                </div>
               </div>
             </div>
 
             <div class="total rounded">
               <div class="total-expense text-holder rounded">
-                <h4 class="card-title">Total Expense</h4>
+                <div class="text">
+                  <h4 class="card-title">Net Profit Margin</h4>
                     <h3 class="card-text"><Counter ref='counter' :startAmount='0' :endAmount='579000' :duration='10' prefix='&#8358;' suffix='' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true' @finished='alert(`Counting finished!`)'/></h3>
-                    <p>Saved 25%</p>
+                    <p>Saved 65%</p>
+                </div>
               </div>
             </div>
             
             <div class="cash rounded">
               <div class="cash-hand text-holder rounded">
-                 <h4 class="card-title">Cash On Hand</h4>
+                 <div class="text">
+                  <h4 class="card-title">Net Profit Margin</h4>
                     <h3 class="card-text"><Counter ref='counter' :startAmount='0' :endAmount='579000' :duration='10' prefix='&#8358;' suffix='' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true' @finished='alert(`Counting finished!`)'/></h3>
-                    <p>Saved 25%</p>
+                    <p>Saved 65%</p>
+                </div>
               </div>
             </div>
 
             <div class="profit rounded">
               <div class="profit-margin text-holder rounded">
-                <h4 class="card-title">Net Profit Margin</h4>
+                <div class="text">
+                  <h4 class="card-title">Net Profit Margin</h4>
                     <h3 class="card-text"><Counter ref='counter' :startAmount='0' :endAmount='579000' :duration='10' prefix='&#8358;' suffix='' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true' @finished='alert(`Counting finished!`)'/></h3>
                     <p>Saved 65%</p>
+                </div>
               </div>
             </div>
     </div>
@@ -61,6 +69,14 @@ export default {
 }
 
 h3{ font-weight: 700;}
+h4{font-weight: 500;}
+.text{
+  padding: .9rem .5rem; 
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-weight: 600;
+}
 
 .cont {
   display: grid;
@@ -74,6 +90,10 @@ h3{ font-weight: 700;}
     color: #fff;
     transition: .5s;
 }
+
+.rounded {
+  border-radius: 10px !important;
+}
 .income-total{
     background-color:blue;
     height: 100%;
@@ -83,11 +103,7 @@ h3{ font-weight: 700;}
 }
 
 .text-holder {
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  font-weight: 600;
+  padding: 5rem 2rem;
 }
 
   .total{
