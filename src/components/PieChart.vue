@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <div :id="domId" style="height: 50vh"></div>
   </div>
 </template>
@@ -9,14 +9,14 @@ import { ref, onMounted } from "vue";
 import Highcharts from "highcharts";
 export default {
   name: "pieChart",
-  props: ["domId"],
+  props: ["domId", "buyData", "buyData1", "chartData"],
   setup(props) {
     const chart = ref(null);
     
     onMounted(() => {  
       // Make monochrome colors
       var pieColors = (function () {
-        var colors = [],
+        var colors = ['red', 'blue', 'yellow', 'pink'],
           base = Highcharts.getOptions().colors[0],
           i;
 
@@ -53,7 +53,7 @@ export default {
         },
         plotOptions: {
           pie: {
-            allowPointSelect: true,
+            allowPointSelect: false,
             cursor: "pointer",
             colors: pieColors,
             dataLabels: {
@@ -61,24 +61,19 @@ export default {
               format: "<b>{point.name}</b><br>{point.percentage:.1f} %",
               distance: -50,
               filter: {
-                property: "percentage",
+                property: "",
                 operator: ">",
                 value: 4,
               },
             },
+              showInLegend: true,
+
           },
         },
         series: [
           {
             name: "Share",
-            data: [
-              { name: "Chrome", y: 61.41 },
-              { name: "Internet Explorer", y: 11.84 },
-              { name: "Firefox", y: 10.85 },
-              { name: "Edge", y: 4.67 },
-              { name: "Safari", y: 4.18 },
-              { name: "Other", y: 7.05 },
-            ],
+            data: props.chartData
           },
         ],
       };
@@ -94,7 +89,12 @@ export default {
 </script>
 
 <style scoped>
-.highcharts-figure,
+
+.container {
+  height: 400px;
+  width: 100%;
+}
+/* .highcharts-figure,
 .highcharts-data-table table {
   min-width: 320px;
   max-width: 660px;
@@ -135,5 +135,5 @@ export default {
 
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
-}
+} */
 </style>
