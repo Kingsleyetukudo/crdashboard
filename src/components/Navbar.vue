@@ -53,12 +53,12 @@
 
     <ul>
         <li> <font-awesome-icon icon="fa-solid fa-house" /> Dashboard</li>
-        <li> <img src="../assets/file-lines-regular.svg" alt=""> Pages</li>
-        <li><img src="../assets/file-lines-regular.svg" alt=""> Applications</li>
-        <li><img src="../assets/file-lines-regular.svg" alt=""> UI Components</li>
-        <li><img src="../assets/file-lines-regular.svg" alt=""> Widgets</li>
-        <li><img src="../assets/file-lines-regular.svg" alt=""> Forms</li>
-        <li><img src="../assets/file-lines-regular.svg" alt=""> Charts</li>
+        <li> <font-awesome-icon icon="fa-solid fa-file-lines" /> Pages</li>
+        <li> <font-awesome-icon icon="fa-solid fa-bars" /> Applications </li>
+        <li> <font-awesome-icon icon="fa-solid fa-palette" /> UI Components</li>
+        <li> <font-awesome-icon icon="fa-solid fa-palette" /> Widgets</li>
+        <li> <font-awesome-icon icon="fa-solid fa-address-card" />Forms</li>
+        <li> <font-awesome-icon icon="fa-solid fa-chart-line" /> Charts</li>
     </ul>
   </div>
 
