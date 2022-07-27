@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <div :id="domId" style="height: 50vh"></div>
   </div>
 </template>
@@ -9,7 +9,7 @@ import { ref, onMounted } from "vue";
 import Highcharts from "highcharts";
 export default {
   name: "pieChart",
-  props: ["domId", "buyData", "buyData1"],
+  props: ["domId", "buyData", "buyData1", "chartData"],
   setup(props) {
     const chart = ref(null);
     
@@ -73,7 +73,7 @@ export default {
         series: [
           {
             name: "Share",
-            data: props.buyData
+            data: props.chartData
           },
         ],
       };
@@ -89,6 +89,11 @@ export default {
 </script>
 
 <style scoped>
+
+.container {
+  height: 400px;
+  width: 100%;
+}
 /* .highcharts-figure,
 .highcharts-data-table table {
   min-width: 320px;

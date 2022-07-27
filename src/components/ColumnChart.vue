@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <div :id="domId" style="height: 50vh"></div>
   </div>
 </template>
@@ -8,7 +8,7 @@
 import Highcharts from 'highcharts'
 import { onMounted, ref } from '@vue/runtime-core'
 export default {
-    props:['domId', 'columnChart'],
+    props:['domId', 'colData'],
 setup(props) {
 
     const chart = ref(null)
@@ -62,7 +62,7 @@ setup(props) {
       borderWidth: 0
     }
   },
-  series: props.columnChart
+  series: props.colData
 };
 
 chart.value = new Highcharts.chart(columnCharts)
@@ -77,5 +77,13 @@ chart.value = new Highcharts.chart(columnCharts)
 </script>
 
 <style>
+ /* * {
+    padding: 0;
+    margin: 0;
+  }
+.container {
+ 
+  width: 100%;
+} */
 
 </style>

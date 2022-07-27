@@ -48,16 +48,7 @@ export default {
       Counter
     },
     setup() {
-        // const buyData = ref([
-        //   {name: 'kingsley', y: 80},
-        //   {name: 'kingsley', y: 50},
-        //   {name: 'kingsley', y: 60},
-        //   {name: 'kingsley', y: 70},
-        // ])
-
-        // return{
-        //   buyData,
-        // }
+    
     },
 }
 </script>
@@ -74,13 +65,14 @@ h3{ font-weight: 700;}
 .cont {
   display: grid;
   grid-gap: 1.5rem;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 .income{
     background-image: url(../assets/ethereum-small.png) ;
     background-repeat: no-repeat;
     background-position: top right;
     color: #fff;
+    transition: .5s;
 }
 .income-total{
     background-color:blue;
@@ -147,7 +139,7 @@ h3{ font-weight: 700;}
 }
 }
 
-@media (min-width: 568px) and (max-width: 1300px) {
+@media (min-width: 568px) and (max-width: 1500px) {
   .cont {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -158,12 +150,12 @@ h3{ font-weight: 700;}
 }
 }
 
-/* @media (max-width: 1200px) {
+@media (min-width: 1501px) {
   .cont {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-} */
+}
 
 
 

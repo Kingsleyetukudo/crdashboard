@@ -1,8 +1,7 @@
 <template>
   <div class="sildebar-col">
     <div class="dashboard-image">
-        <!-- <img src="../assets/logo.png" class="img-fluid" alt=""> -->
-        <h4>Lorem, ipsum.</h4>
+        <img src="../assets/logo.png" class="img-fluid" alt="">
     </div>
     <ul>
         <li> <font-awesome-icon icon="fa-solid fa-house" />Dashboard</li>
@@ -31,6 +30,8 @@ export default {
     flex-direction: column;
     gap: 2rem;
     color: #a5adc6;
+    /* position: fixed;
+    left: 2rem; */
 }
     ul {
     list-style: none;
