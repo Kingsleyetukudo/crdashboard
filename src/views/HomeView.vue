@@ -21,6 +21,9 @@
       </div>
       <LineCol domId="linecol" />
       </div>
+    <div class="footer">
+      <p>Lorem, ipsum dolor &copy;.</p>
+    </div>
     </div>
   </div>
 </template>
@@ -67,18 +70,18 @@ export default {
 }
 
 .chart {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr );
+  display: flex;
+  gap: 2rem;
   width: 100%;
 }
 
-.chart-component{
+.chart-component, .chart-holder{
   width: 50%;
 }
   .home {
     background-color: #f7faff;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 2.5rem 0 2.5rem 2.5rem;
     display: flex;
     gap: 2.5rem;
@@ -101,6 +104,15 @@ export default {
     padding-bottom: 1rem;
   }
 
+  .footer {
+    background-color: #ddd;
+    text-align: center;
+    color: #000;
+    font-size: 1em;
+    padding: 2rem 0;
+
+  }
+
   .main-view::-webkit-scrollbar{
     display: none;
   }
@@ -117,6 +129,7 @@ export default {
     /* width: 200px;
     height: 300px; */
     display: flex;
+    gap: 2rem;
     width: 100%;
   }
 
@@ -138,10 +151,14 @@ export default {
 
   @media (max-width: 600px) {
     .chart {
-    grid-template-columns: repeat(1, 1fr );
+    flex-wrap: wrap;
   }
   .cav {
     flex-wrap: wrap;
   }
+
+  .chart-component, .chart-holder{
+  width: 100%;
+}
   }
 </style>

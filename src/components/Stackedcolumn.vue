@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-fiuld">
     <div :id="domId" style="height: 50vh"></div>
   </div>
 </template>
