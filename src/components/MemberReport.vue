@@ -79,6 +79,8 @@ export default {
     }
     .income-total:hover{
         background-color:  #3b77efc8;
+        transform: rotateX(45deg) ;
+
     }
 
      .total{
