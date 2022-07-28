@@ -15,13 +15,13 @@
 
         <div class="notification">
             <div class="position-relative">
-                <font-awesome-icon icon="fa-regular fa-bell" class="top-icon"/> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count">+99</span>
+                <font-awesome-icon icon="fa-regular fa-bell" class="top-icon"/> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count p-2">+99</span>
             </div>
         </div>
         
         <div class="message">
             <div class="position-relative">
-                <font-awesome-icon icon="fa-regular fa-comment-dots" class="top-icon"/> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count">+99</span>
+                <font-awesome-icon icon="fa-regular fa-comment-dots" class="top-icon"/> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count p-2">+99</span>
             </div>
 
         </div>
