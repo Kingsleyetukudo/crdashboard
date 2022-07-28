@@ -106,7 +106,7 @@ h4{font-weight: 500;}
   padding: 5rem 2rem;
 }
 
-  .total{
+.total{
     background-image: url(../assets/ethereum-small.png) ;
     background-repeat: no-repeat;
     background-position: top right;
@@ -152,6 +152,14 @@ h4{font-weight: 500;}
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1rem;
+}
+
+.text-holder {
+  padding: .6rem;
+}
+
+.text{
+  gap: .5rem;
 }
 }
 
