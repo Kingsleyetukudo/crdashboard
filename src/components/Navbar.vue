@@ -5,26 +5,20 @@
             <img src="../assets/bars-solid.svg" class="img-fluid" alt="">
         </div>
 
-        <div class="search_field rounded-pill">
-            <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="top-icon"/>
-            <input type="text" placeholder="search here..." class="w-100 p-2">
+        <div class="search_field">
+           <h4> Dashboard</h4>
         </div>
     </div>
 
-    <div class="profile-col">
+    <div class="profile-col d-flex align-items-center">
 
         <div class="notification">
             <div class="position-relative">
-                <font-awesome-icon icon="fa-regular fa-bell" class="top-icon"/> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count p-2">+99</span>
+                <Bell fillColor="#989898"/> <span class="count"></span>
             </div>
         </div>
         
-        <div class="message">
-            <div class="position-relative">
-                <font-awesome-icon icon="fa-regular fa-comment-dots" class="top-icon"/> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count p-2">+99</span>
-            </div>
-
-        </div>
+    
         <div class="profile-img">
             <img src="../assets/avatar.png" class="img-fluid" alt="">
             <div class="profile-details">
@@ -67,7 +61,12 @@
 </template>
 
 <script>
+
+import Bell from 'vue-material-design-icons/BellOutline.vue'
 export default {
+    components: {
+        Bell
+    },
     data() {
         return {
             showNav: false
@@ -154,8 +153,9 @@ li img {
     align-items: center;
     width: 70%;
     gap: .5rem;
-    background-color: #f7faff;
     padding: .5rem 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
 }
 
 .profile-details {
@@ -204,16 +204,16 @@ input {
     height: 25px;
 }
 
-.notification, .message, .mobile-bar{
+/* .notification, .message, .mobile-bar{
     width: 35px;
     height: 35px;
     cursor: pointer;
-}
+} */
 
 .profile-img {
-    width: 70px;
-    height: 70px;
-    border: 3px solid #a5adc6;
+    width: 40px;
+    height: 40px;
+    /* border: 3px solid #a5adc6; */
     border-radius: 50px
 }
 
@@ -224,7 +224,13 @@ input {
 }
 
 .count {
-    background-color: red;
+    background-color: #386E4B;
+    width: 8px;
+    height: 8px;
+    position:absolute;
+    border-radius: 50px;
+    top: 3px;
+    left: 15px;
 }
 
 .top-icon {

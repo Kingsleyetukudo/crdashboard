@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="side-bar">
-      <Sidebar />
+        <Sidebar />
     </div>
     <div class="main-view">
       <Nav />
@@ -66,7 +66,6 @@ export default {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  width: 100%;
 }
 
 .chart {
@@ -79,10 +78,10 @@ export default {
   width: 50%;
 }
   .home {
-    background-color: #f7faff;
+    background-color: #70BD9421;
     width: 100%;
-    /* height: 100vh; */
-    padding: 2.5rem 0 2.5rem 2.5rem;
+    height: 100vh;
+    /* padding: 2.5rem 0 2.5rem 2.5rem; */
     display: flex;
     gap: 2.5rem;
     overflow: hidden;
@@ -90,7 +89,14 @@ export default {
   }
 
   .side-bar {
-    width: 200px;
+    width: 15%;
+    max-width: 273px;
+    padding: 1.5rem 0 1rem;
+    height: 100%;
+    max-height: 700px;
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .main-view {

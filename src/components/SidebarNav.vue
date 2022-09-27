@@ -1,65 +1,128 @@
 <template>
   <div class="sildebar-col">
-    <div class="dashboard-image">
-        <img src="../assets/logo.png" class="img-fluid" alt="">
+    <div class="logo-menu d-flex flex-column">
+      <div class="dashboard-image mb-5 pe-4">
+        <img src="../assets/logo.png" class="img-fluid" alt="" />
+      </div>
+      <ul>
+        <li>
+          <a href="#"><Home :size="35" /> Dashboard</a>
+        </li>
+        <li>
+          <a href="#"><UserPlus class="font-s" :size="35" /> Membership </a>
+        </li>
+        <li>
+          <a href="#"><Wallet :size="35" /> Financials </a>
+        </li>
+        <li>
+          <a href="#"><Events :size="35" /> Events </a>
+        </li>
+        <li>
+          <a href="#"><Report :size="35" /> Report </a>
+        </li>
+      </ul>
     </div>
-    <ul>
-        <li> <font-awesome-icon icon="fa-solid fa-house" />Dashboard</li>
-        <li> <font-awesome-icon icon="fa-solid fa-file-lines" /> Pages</li>
-        <li> <font-awesome-icon icon="fa-solid fa-bars" /> Applications </li>
-        <li> <font-awesome-icon icon="fa-solid fa-palette" /> UI Components</li>
-        <li> <font-awesome-icon icon="fa-solid fa-palette" /> Widgets</li>
-        <li> <font-awesome-icon icon="fa-solid fa-address-card" />Forms</li>
-        <li> <font-awesome-icon icon="fa-solid fa-chart-line" /> Charts</li>
-    </ul>
+
+    <div class="logout-settings">
+      <ul>
+        <li>
+          <a href="#"><Settings :size="35" /> Settings </a>
+        </li>
+        <li>
+          <a href="#"><Logout :size="35" /> Logout </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
+import MenuIcon from "vue-material-design-icons/Menu.vue";
+import UserPlus from "vue-material-design-icons/AccountPlus.vue";
+import Home from "vue-material-design-icons/Home.vue";
+import Wallet from "vue-material-design-icons/Wallet.vue";
+import Events from "vue-material-design-icons/Calendar.vue";
+import Report from "vue-material-design-icons/Flag.vue";
+import Settings from "vue-material-design-icons/Cog.vue";
+import Logout from "vue-material-design-icons/Logout.vue";
 export default {
-
-}
+  components: {
+    MenuIcon,
+    UserPlus,
+    Home,
+    Wallet,
+    Events,
+    Report,
+    Settings,
+    Logout,
+  },
+};
 </script>
 
 <style scoped>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
 
-*{padding: 0; margin: 0; box-sizing: border-box;}
+/* .icon {
+  color: aqua;
+  width: 40px;
+} */
 
 .sildebar-col {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    color: #a5adc6;
-    /* position: fixed;
-    left: 2rem; */
-}
-    ul {
-    list-style: none;
-    font-size: 1em;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  gap: 2rem;
+  background-color: #f9f9f9;
 }
 
-li {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+.logout-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+ul {
+  list-style: none;
+  font-size: 1em;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #fff;
+  color: #898989;
+  padding: 0.5rem;
+}
+li a:hover,
+li a:focus {
+  background-color: #70bd9421;
+  border-left: 5px solid #4e876d;
+  padding-left: 10px;
+  color: #3e6c57;
 }
 
 li img {
-    width: 15px;
+  width: 15px;
 }
 
-.dashboard-image {
+/* .dashboard-image {
     background-color: #fff;
     padding: 2rem;
     border-radius: 5px;
-}
+} */
 
 .dashboard-image img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 </style>
