@@ -91,7 +91,7 @@ export default {
 
 .nav-col {
     border-radius: 5px;
-    padding: 2rem;
+    padding: 1rem 5rem 0;
     background-color: #fff;
 }
 
@@ -151,9 +151,6 @@ li img {
 .search_field {
     display: flex;
     align-items: center;
-    width: 70%;
-    gap: .5rem;
-    padding: .5rem 1rem;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
 }

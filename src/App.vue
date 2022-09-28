@@ -6,7 +6,7 @@
 
 <style>
 #app {
-  font-family: 'Roboto', 'Ubuntu' sans-serif;
+  font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;

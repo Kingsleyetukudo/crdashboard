@@ -14,44 +14,57 @@ setup(props) {
     const chart = ref(null)
 
      onMounted(() => {
+
+      var pieColors = (function () {
+        var colors = ['red', 'blue', 'yellow', 'pink'],
+          base = Highcharts.getOptions().colors[0],
+          i;
+
+        for (i = 0; i < 10; i += 1) {
+          // Start out with a darkened base color (negative brighten), and end
+          // up with a much brighter color
+          colors.push(
+            Highcharts.color(base)
+              .brighten((i - 3) / 7)
+              .get()
+          );
+        }
+        return colors;
+      })();
+
        const columnCharts = {
   chart: {
     type: 'column',
     renderTo: props.domId
   },
   title: {
-    text: 'Monthly Average Rainfall'
+    text: 'Overview'
   },
-  subtitle: {
-    text: 'Source: WorldClimate.com'
-  },
+  // subtitle: {
+  //   text: 'Source: WorldClimate.com'
+  // },
   xAxis: {
     categories: [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec'
+      'Mon',
+      'Tus',
+      'Wedn',
+      'Thur',
+      'Fri',
+      'Sat',
+      'Sun',
     ],
     crosshair: true
   },
   yAxis: {
     min: 0,
     title: {
-    text: 'Rainfall (mm)'
+    text: ''
     }
   },
   tooltip: {
     headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
     pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-      '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+      '<td style="padding:.4rem"><b>&#8358;{point.y:.1f}</b></td></tr>',
     footerFormat: '</table>',
     shared: true,
     useHTML: true
@@ -59,7 +72,8 @@ setup(props) {
   plotOptions: {
     column: {
       pointPadding: 0.2,
-      borderWidth: 0
+      borderWidth: 0,
+      colors: pieColors,
     }
   },
   series: props.colData

@@ -6,19 +6,19 @@
       </div>
       <ul>
         <li>
-          <a href="#"><Home :size="35" /> Dashboard</a>
+          <a href="#"><Home :size="30" /> Dashboard</a>
         </li>
         <li>
           <a href="#"><UserPlus class="font-s" :size="35" /> Membership </a>
         </li>
         <li>
-          <a href="#"><Wallet :size="35" /> Financials </a>
+          <a href="#"><Wallet :size="30" /> Financials </a>
         </li>
         <li>
-          <a href="#"><Events :size="35" /> Events </a>
+          <a href="#"><Events :size="30" /> Events </a>
         </li>
         <li>
-          <a href="#"><Report :size="35" /> Report </a>
+          <a href="#"><Report :size="30" /> Report </a>
         </li>
       </ul>
     </div>
@@ -26,10 +26,10 @@
     <div class="logout-settings">
       <ul>
         <li>
-          <a href="#"><Settings :size="35" /> Settings </a>
+          <a href="#"><Settings :size="30" /> Settings </a>
         </li>
         <li>
-          <a href="#"><Logout :size="35" /> Logout </a>
+          <a href="#"><Logout :size="30" /> Logout </a>
         </li>
       </ul>
     </div>

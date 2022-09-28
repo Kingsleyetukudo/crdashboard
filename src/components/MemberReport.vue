@@ -2,44 +2,57 @@
 
           <div class="cont">
 
-            <div class="income rounded">
-              <div class="income-total text-holder rounded">
-                <div class="text">
-                  <h4 class="card-title">Net Profit Margin</h4>
-                    <h3 class="card-text"><Counter ref='counter' :startAmount='0' :endAmount='579000' :duration='10' prefix='&#8358;' suffix='' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true' @finished='alert(`Counting finished!`)'/></h3>
-                    <p>Saved 65%</p>
+            <div class="">
+                <div class="text-col">
+                  <h4 class="title">Things you can do</h4>
+                    <p>Add member</p>
+                    <p>Send SMS</p>
+                    <p>Record Payments</p>
+                    <p>New contribution</p>
                 </div>
-              </div>
             </div>
 
-            <div class="total rounded">
-              <div class="total-expense text-holder rounded">
-                <div class="text">
-                  <h4 class="card-title">Net Profit Margin</h4>
-                    <h3 class="card-text"><Counter ref='counter' :startAmount='0' :endAmount='579000' :duration='10' prefix='&#8358;' suffix='' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true' @finished='alert(`Counting finished!`)'/></h3>
-                    <p>Saved 65%</p>
+            <div class="income rounded gen">
+                <div class="text rounded d-flex flex-column justify-content-between position-relative">
+                  <img src="../assets/income.png" class="position-absolute end-0 p-2" alt="">
+                  <h4 class="card-title p-4 mt-2">Income</h4>
+                    <h3 class="card-text px-4"><Counter ref='counter' :startAmount='0' :endAmount='579000' :duration='10' prefix='&#8358;' suffix='' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true' @finished='alert(`Counting finished!`)'/></h3>
+                    <p class="align-self-end m-4 text-success">+6.5%</p>
                 </div>
-              </div>
+            </div>
+
+            <div class="expenses rounded gen">
+                <div class="text rounded d-flex flex-column justify-content-between position-relative">
+                  <img src="../assets/expenses.png" class="position-absolute end-0 p-2" alt="">
+                  <h4 class="card-title p-4 mt-2">Expenses</h4>
+                    <h3 class="card-text px-4"><Counter ref='counter' :startAmount='0' :endAmount='579000' :duration='10' prefix='&#8358;' suffix='' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true' @finished='alert(`Counting finished!`)'/></h3>
+                    <p class="align-self-end m-4 text-danger">-3.21%</p>
+                </div>
             </div>
             
-            <div class="cash rounded">
-              <div class="cash-hand text-holder rounded">
-                 <div class="text">
-                  <h4 class="card-title">Net Profit Margin</h4>
-                    <h3 class="card-text"><Counter ref='counter' :startAmount='0' :endAmount='579000' :duration='10' prefix='&#8358;' suffix='' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true' @finished='alert(`Counting finished!`)'/></h3>
-                    <p>Saved 65%</p>
+            <div class="wallet rounded gen">
+                 <div class="text rounded d-flex flex-column justify-content-between position-relative">
+                    <img src="../assets/wallet.png" class="position-absolute end-0 p-2" alt="">
+                  <h4 class="card-title mt-2 p-4">Wallet Balance</h4>
+                    <h3 class="card-text px-4"><Counter ref='counter' :startAmount='0' :endAmount='579000' :duration='10' prefix='&#8358;' suffix='' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true' @finished='alert(`Counting finished!`)'/></h3>
+                    <p class="align-self-end m-4 p-1 withdraw">WITHDRAWAL</p>
                 </div>
-              </div>
             </div>
 
-            <div class="profit rounded">
-              <div class="profit-margin text-holder rounded">
-                <div class="text">
-                  <h4 class="card-title">Net Profit Margin</h4>
-                    <h3 class="card-text"><Counter ref='counter' :startAmount='0' :endAmount='579000' :duration='10' prefix='&#8358;' suffix='' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true' @finished='alert(`Counting finished!`)'/></h3>
-                    <p>Saved 65%</p>
+            <div class="membership-sms d-flex align-items-center">
+                <div class=" membership rounded d-flex flex-column me-2 position-relative">
+                   <img src="../assets/group.png" alt="" class="position-absolute end-0 p-2">
+                  <h4 class="card-title mt-2 p-4">Membership</h4>
+                    <h3 class="card-text px-4">568</h3>
+                    <p class="m-4 text-success">PRO PLAN</p>
                 </div>
-              </div>
+
+                <div class=" sms-box rounded d-flex flex-column position-relative">
+                   <img src="../assets/sms.png" alt="" class="position-absolute end-0 p-2">
+                  <h4 class="card-title mt-2 p-4">SMS Units</h4>
+                    <h3 class="card-text px-4">569</h3>
+                    <p class="align-self-end m-4 p-1 withdraw">Buy Units</p>
+                </div>
             </div>
     </div>
 
@@ -66,120 +79,101 @@ export default {
 *{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-h3{ font-weight: 700;}
-h4{font-weight: 500;}
-.text{
-  padding: .9rem .5rem; 
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  font-weight: 600;
-}
+
 
 .cont {
-  display: grid;
-  grid-gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
-}
-.income{
-    background-image: url(../assets/ethereum-small.png) ;
-    background-repeat: no-repeat;
-    background-position: top right;
-    color: #fff;
-    transition: .5s;
+  margin: 2rem 1rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+
 }
 
-.rounded {
-  border-radius: 10px !important;
-}
-.income-total{
-    background-color:blue;
-    height: 100%;
-}
-.income-total:hover{
-    background-color:  #3b77efc8;
+.gen {
+  width: 230px;
+  min-width: 150px;
+  border: 1px solid red;
 }
 
-.text-holder {
-  padding: 5rem 2rem;
+.text {
+  border: 1px solid #ddff76;
+  height: 100%;
+}
+.card-title {
+  font-size: 1em;
+  font-weight: 400px;
+  font-family: 'Work Sans', sans-serif;
+}
+.card-text {
+  font-size: 1.5em;
+  font-weight: 600px;
+  font-family: 'Work Sans', sans-serif;
+}
+.title {
+  font-size: 1em;
+  font-weight: 500px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
-.total{
-    background-image: url(../assets/ethereum-small.png) ;
-    background-repeat: no-repeat;
-    background-position: top right;
-    color: #fff;
-}
-.total-expense{
-    background-color:#61C2FE;
-    height: 100%;
-    
-}
-.total-expense:hover{
-    background-color:  #3b77efc8;
-}
-.cash{
-      background-image: url(../assets/ethereum-small.png) ;
-    background-repeat: no-repeat;
-    background-position: top right;
-    color: #fff;
-}
-.cash-hand{
-    background-color:#A66DD4;
-    height: 100%;
-}
-.cash-hand:hover{
-      background-color:  #3b77efc8;
-}
-.profit{
-      background-image: url(../assets/ethereum-small.png) ;
-    background-repeat: no-repeat;
-    background-position: top right;
-    color: #fff;
-}
-.profit-margin{
-    background-color:#6DD4B1;
-    height: 100%;
-}
-    .profit-margin:hover{
-      background-color:  #3b77efc8;
+.income {
+  background-color: #F8F7F3;
 }
 
-@media (max-width: 567px) {
-  .cont {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
+.expenses {
+  background-color: #F0F9FB;
 }
 
-.text-holder {
-  padding: .6rem;
+.wallet {
+  background-color: #DFECE6;
+  /* background-image: url(../assets/income.png);
+  background-repeat: no-repeat;
+  background-position: top right; */
+  /* height: 100%; */
 }
 
-.text{
+.membership {
+  background-color: #F0F4F0;
+}
+.sms-box {
+  background-color: #F0F4F0;
+}
+
+
+
+.text-col {
+  display: flex;
+  flex-direction: column;
   gap: .5rem;
 }
-}
 
-@media (min-width: 568px) and (max-width: 1500px) {
-  .cont {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* .text {
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  max-height: 250px;
+} */
+
+.withdraw {
+  background-color: #4E876D;
+  color: #fff;
+  font-size: .5em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
-.text-holder {
-  padding: 1.5rem 1rem;
+.text p, .membership p {
+  font-size: .6em;
   font-weight: 600;
-}
+  letter-spacing: 0.5px;
 }
 
-@media (min-width: 1501px) {
-  .cont {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-}
+
+
+
 
 
 

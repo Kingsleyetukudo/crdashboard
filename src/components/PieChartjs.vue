@@ -1,5 +1,6 @@
 <template>
-  <Pie
+   <div class="box">
+     <Doughnut
     :chart-options="chartOptions"
     :chart-data="chartData"
     :chart-id="chartId"
@@ -10,21 +11,22 @@
     :width="width"
     :height="height"
   />
+   </div>
 </template>
 
 <script>
-import { Pie } from 'vue-chartjs'
+import { Doughnut } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement, CategoryScale } from 'chart.js'
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
 
 export default {
-  name: 'PieChart',
-  components: { Pie },
+  name: 'DoughnutChart',
+  components: { Doughnut },
   props: {
     chartId: {
       type: String,
-      default: 'pie-chart'
+      default: 'doughnut-chart'
     },
     datasetIdKey: {
       type: String,
@@ -32,11 +34,11 @@ export default {
     },
     width: {
       type: Number,
-      default: 50
+      default: 100
     },
     height: {
       type: Number,
-      default: 50
+      default: 100
     },
     cssClasses: {
       default: '',
@@ -54,13 +56,24 @@ export default {
   data() {
     return {
       chartData: {
-        datasets: [ { data: [40, 20, 12,90], backgroundColor: ['red', 'blue', 'green','pink'] } ],
-        labels: [ 'January', 'February', 'March','july' ],
+        datasets: [ { data: [10.33, 4.19, 10.33,4.19, 10.33], backgroundColor: ['#24348A', '#FBB122', '#78B298','#C3E1FF', '#090C21'] } ],
+        labels: [ 'Contribution', 'Expenses', 'Donations','Payment', 'Subscription' ],
       },
       chartOptions: {
-        responsive: true
+        responsive: true,
+         legend: {
+             position: 'right',
+            display: false
+        }
       }
     }
   }
 }
 </script>
+
+<style scoped>
+.box {
+  width: 450px;
+  height: 200px;
+}
+</style>
