@@ -3,7 +3,7 @@
           <div class="cont">
 
       
-                <div class="text-col gen">
+                <div class="text-col">
                   <h4 class="title">Things you can do</h4>
                     <p>Add member</p>
                     <p>Send SMS</p>
@@ -94,7 +94,7 @@ export default {
 }
 
 .gen {
-  width: 270px;
+  width: 17%;
   min-width: 150px;
 }
 
@@ -146,7 +146,6 @@ export default {
   display: flex;
   flex-direction: column;
   gap: .5rem;
-  /* order: 4; */
 }
 
 /* .text {
@@ -210,7 +209,11 @@ export default {
 }
 }
 
-
+@media (min-width: 1500px) {
+  .gen {
+    width: 20%
+  }
+}
 
 
 

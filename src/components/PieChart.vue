@@ -1,6 +1,6 @@
 <template>
   <div class="container-fiuld">
-    <div :id="domId"></div>
+    <div :id="domId" style="height: 100%; width: 100%"></div>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
     onMounted(() => {  
       // Make monochrome colors
       var pieColors = (function () {
-        var colors = ['red', 'blue', 'yellow', 'pink'],
+        var colors = ['#24348A', '#FBB122', '#78B298','#C3E1FF', '#090C21'],
           base = Highcharts.getOptions().colors[0],
           i;
 
@@ -41,7 +41,7 @@ export default {
           renderTo: props.domId,
         },
         title: {
-          text: "Browser market shares at a specific website, 2014",
+          text: "Income Categories",
         },
         tooltip: {
           pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
@@ -65,9 +65,9 @@ export default {
                 operator: ">",
                 value: 4,
               },
+
             },
               showInLegend: true,
-
           },
         },
         series: [

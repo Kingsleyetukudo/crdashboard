@@ -113,7 +113,7 @@ export default {
     z-index: 500;
     top: 0;
     left: 0;
-    border-right: 2px solid red;
+    border-right: 2px solid #4E876D;
     transition: all .1s ease;
     overflow: auto;
     background-color: #fff;

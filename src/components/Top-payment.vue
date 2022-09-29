@@ -1,7 +1,8 @@
 <template>
  <div class="table">
   <h4 class="mx-5 pt-5">Top Payments</h4>
-  <table>
+ <div class="table-col">
+   <table>
   <thead>
     <tr>
       <th>Fund</th>
@@ -38,6 +39,7 @@
     
   </tbody>
 </table>
+ </div>
 
 <div class="pagination d-flex align-items-center justify-content-between flex-wrap px-4">
   <div class="page-counter d-flex align-items-center">
@@ -92,8 +94,12 @@ h4 {
   letter-spacing: 0.5px;
 }
 
+.table-col {
+  overflow: auto;
+}
+
 table {
-  /* width: 100%; */
+  width: 100%;
   border-collapse: collapse;
   /* margin-top: 2rem; */
 }
@@ -143,7 +149,6 @@ td {
   align-items:center ;
   justify-content: space-between;
   gap: .5rem;
-  align-self: flex-end;
  }
 
 /* .pagination {
@@ -164,5 +169,16 @@ td {
 
  .active {
   background-color: #4E876D;
+ }
+
+  
+ @media (max-width: 520px) {
+
+ .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
  }
 </style>

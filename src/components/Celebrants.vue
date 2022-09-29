@@ -1,7 +1,8 @@
 <template>
  <div class="table">
   <h4 class="mx-5 pt-5">This month celebrants</h4>
-  <table>
+  <div class="table-col">
+    <table>
   <tbody>
     <tr></tr>
     <tr>
@@ -40,6 +41,7 @@
   </tbody>
 </table>
 
+  </div>
 <!-- <div class="pagination d-flex align-items-center justify-content-between px-4">
   <div class="page-counter d-flex align-items-center">
     <div class="par">showing <span>1- 5</span> of <span>100</span> of data</div>
@@ -91,6 +93,10 @@ h4 {
   font-size: 1em;
   font-weight: 600;
   letter-spacing: 0.5px;
+}
+
+.table-col {
+  overflow: auto;
 }
 
 table {
@@ -161,4 +167,5 @@ td {
  .active {
   background-color: #4E876D;
  }
+
 </style>

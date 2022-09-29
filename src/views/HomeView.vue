@@ -9,14 +9,17 @@
       <MemberReport />
 
       <div class="chart-col">
-        <div class="pay">
+        <div class="pay1">
           <ColumnChart />
         </div>
+        <div class="pay1">
+          <PieChart />
+        </div>
 
-        <div class="pay d-flex flex-column">
+        <!-- <div class="pay d-flex flex-column">
           <h5 class="m-3">Income categories</h5>
           <PieChartjs />
-        </div>
+        </div> -->
       </div>
 
       <div class="trans">
@@ -46,6 +49,7 @@ import Sidebar from "../components/SidebarNav.vue";
 import MemberReport from "../components/MemberReport.vue";
 import ColumnChart from "../components/ColumnData.vue";
 import PieChartjs from "../components/DoghunutChartjs.vue";
+import PieChart from "../components/PieData.vue";
 import Latest from "../components/Latest-transaction.vue";
 import Payment from "../components/Top-payment.vue";
 import Celebrant from "../components/Celebrants.vue";
@@ -59,6 +63,7 @@ export default {
     MemberReport,
     ColumnChart,
     PieChartjs,
+    PieChart,
     Latest,
     Payment,
     Celebrant,
@@ -119,7 +124,6 @@ export default {
   }
 .trans {
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
@@ -130,11 +134,15 @@ export default {
 }
 
 .pay {
-  /* height: 100%; */
-  /* width: 100%; */
   border-radius: 10px;
   background-color: #f9f9f9;
-  border: 1px solid rgba(233, 237, 235, 0.8);
+  border: 1px solid #e9edebcc;
+}
+.pay1 {
+  width: 49%;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #e9edebcc;
 }
 
 .footer {
@@ -156,7 +164,7 @@ export default {
 }
 
 @media (max-width: 650px) {
-  .pay {
+  .pay, .pay1 {
     width: 100%;
   }
 }

@@ -1,7 +1,8 @@
 <template>
  <div class="table">
   <h4 class="mx-5 pt-5">Latest Transaction</h4>
-  <table>
+  <div class="table-col">
+    <table>
   <thead>
     <tr>
       <th></th>
@@ -70,14 +71,14 @@
     
   </tbody>
 </table>
+  </div>
 
 <div class="pagination d-flex align-items-center justify-content-between px-4 flex-wrap">
   <div class="page-counter d-flex align-items-center">
-    <div class="par">showing <span>1- 5</span> of <span>100</span> of data</div>
+    <div class="par w-sm-100">showing <span>1- 5</span> of <span>100</span> of data</div>
   </div>
-  <div class="page-move">
-  
-  
+
+  <div class="page-move"> 
   <div class="turn"><Play /> </div>
    <div class=" num active">1</div>
    <div class="num">2</div>
@@ -124,10 +125,15 @@ h4 {
   letter-spacing: 0.5px;
 }
 
+.table-col {
+  overflow: auto;
+}
+
 table {
   /* width: 100%; */
   border-collapse: collapse;
   /* margin-top: 2rem; */
+  overflow: auto;
 }
 
 th, td {
@@ -158,6 +164,8 @@ td {
   width: 100%;
   height: 100%;
  }
+
+ 
 
  .page-counter .par{
   font-size: 10px;
@@ -191,5 +199,15 @@ td {
 
  .active {
   background-color: #4E876D;
+ }
+
+ @media (max-width: 520px) {
+
+ .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
  }
 </style>

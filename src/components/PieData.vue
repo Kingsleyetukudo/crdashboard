@@ -17,11 +17,11 @@ export default {
     setup() {
 
         const chartData = ref([
-            {name: 'Rice', y: 35000},
-            {name: 'Beans', y: 85000},
-            {name: 'Garri', y: 23000},
-            {name: 'oil', y: 2300},
-            {name: 'onions', y: 2100},
+            {name: 'Contribution', y: 35000},
+            {name: 'Expenses', y: 85000},
+            {name: 'Donations', y: 23000},
+            {name: 'Payment', y: 2300},
+            {name: 'Subscription', y: 2100},
         ])
 
         return {
