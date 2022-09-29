@@ -1,59 +1,59 @@
 <template>
  <div class="table">
-  <h4 class="mx-5 pt-5">Top Payments</h4>
+  <h4 class="mx-5 pt-5">This month celebrants</h4>
   <table>
-  <thead>
-    <tr>
-      <th>Fund</th>
-      <th>Amount</th>
-      <th>Date</th>
-    </tr>
-  </thead>
   <tbody>
+    <tr></tr>
     <tr>
-      <td>Dues</td>
-      <td>20,000</td>
-      <td>21/05/2022</td>
+      <td> 
+        <div class="image">
+        <img src="../assets/avatar.png" alt="">
+        </div> 
+        </td>
+      <td>Kathryn Mur</td>
+      <td>25 Sept., 2022</td>
+      <td>Birthdy</td>
     </tr>
     <tr>
-      <td>Dues</td>
-      <td>10,000</td>
-      <td>21/05/2022</td>
+      <td> 
+        <div class="image">
+        <img src="../assets/avatar.png" alt="">
+        </div> 
+        </td>
+      <td>Kathryn Mur</td>
+      <td>30 Sept., 2022</td>
+      <td>Anniesary</td>
     </tr>
     <tr>
-      <td>Dues</td>
-      <td>50,000</td>
-      <td>21/05/2022</td>
+      <td> 
+        <div class="image">
+        <img src="../assets/avatar.png" alt="">
+        </div> 
+        </td>
+      <td>Kathryn Mur</td>
+      <td>28 Sept., 2022</td>
+      <td>Annivesary</td>
     </tr>
-    <tr>
-      <td>Dues</td>
-      <td>50,000</td>
-      <td>21/05/2022</td>
-    </tr>
-    <tr>
-      <td>Dues</td>
-      <td>50,000</td>
-      <td>21/05/2022</td>
-    </tr>
+   
+    
     
   </tbody>
 </table>
 
-<div class="pagination d-flex align-items-center justify-content-between flex-wrap px-4">
+<!-- <div class="pagination d-flex align-items-center justify-content-between px-4">
   <div class="page-counter d-flex align-items-center">
     <div class="par">showing <span>1- 5</span> of <span>100</span> of data</div>
   </div>
-
   <div class="page-move">
+  
+  
   <div class="turn"><Play /> </div>
    <div class=" num active">1</div>
    <div class="num">2</div>
    <div class="num">3</div>
   <div> <Play /></div>
   </div>
-
-</div>
-
+</div> -->
  </div>
 </template>
 
@@ -83,6 +83,7 @@ export default {
   display: flex;
   height: 100%;
   flex-direction: column;
+  /* justify-content: space-between; */
   gap: 1rem
 }
 
@@ -93,7 +94,7 @@ h4 {
 }
 
 table {
-  /* width: 100%; */
+  width: 100%;
   border-collapse: collapse;
   /* margin-top: 2rem; */
 }
@@ -142,14 +143,9 @@ td {
   display: flex;
   align-items:center ;
   justify-content: space-between;
-  gap: .5rem;
-  align-self: flex-end;
- }
+  gap: 1rem;
 
-/* .pagination {
-    border: 1px solid red;
-    width: 100%;
-} */
+ }
 
 .page-move .num {
   width: 30px;

@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <div class="profile-col d-flex align-items-center">
+    <div class="profile-col">
 
         <div class="notification">
             <div class="position-relative">
@@ -45,7 +45,7 @@
     </div>
    </div>
 
-    <ul>
+    <!-- <ul>
         <li> <font-awesome-icon icon="fa-solid fa-house" /> Dashboard</li>
         <li> <font-awesome-icon icon="fa-solid fa-file-lines" /> Pages</li>
         <li> <font-awesome-icon icon="fa-solid fa-bars" /> Applications </li>
@@ -53,7 +53,8 @@
         <li> <font-awesome-icon icon="fa-solid fa-palette" /> Widgets</li>
         <li> <font-awesome-icon icon="fa-solid fa-address-card" />Forms</li>
         <li> <font-awesome-icon icon="fa-solid fa-chart-line" /> Charts</li>
-    </ul>
+    </ul> -->
+    <Mnav />
   </div>
 
 
@@ -63,9 +64,11 @@
 <script>
 
 import Bell from 'vue-material-design-icons/BellOutline.vue'
+import Mnav from '../components/SidebarNav.vue'
 export default {
     components: {
-        Bell
+        Bell,
+        Mnav
     },
     data() {
         return {
@@ -91,7 +94,7 @@ export default {
 
 .nav-col {
     border-radius: 5px;
-    padding: 1rem 5rem 0;
+    padding: 1rem 0 0;
     background-color: #fff;
 }
 
@@ -111,8 +114,8 @@ export default {
     top: 0;
     left: 0;
     border-right: 2px solid red;
-    transition: all .8s ease;
-    overflow: hidden;
+    transition: all .1s ease;
+    overflow: auto;
     background-color: #fff;
 }
 
@@ -120,7 +123,7 @@ export default {
     width: 0px;
     position: absolute;
     top: 0;
-    transition: all .8s ease-out;
+    transition: all .1s ease-out;
     overflow: hidden;
 }
 
@@ -201,11 +204,6 @@ input {
     height: 25px;
 }
 
-/* .notification, .message, .mobile-bar{
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-} */
 
 .profile-img {
     width: 40px;
@@ -217,7 +215,7 @@ input {
 .profile-col {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: .5rem;
 }
 
 .count {
@@ -241,7 +239,7 @@ input {
         display: block;
     }
 
-    .notification, .message, .mobile-bar, .profile-img {
+ .message, .mobile-bar, .profile-img {
         width: 35px;
         height: 35px;
     }

@@ -71,7 +71,7 @@
   </tbody>
 </table>
 
-<div class="pagination d-flex align-items-center justify-content-between">
+<div class="pagination d-flex align-items-center justify-content-between px-4 flex-wrap">
   <div class="page-counter d-flex align-items-center">
     <div class="par">showing <span>1- 5</span> of <span>100</span> of data</div>
   </div>
@@ -112,9 +112,9 @@ export default {
 
 .table {
   display: flex;
-  height: 100%;
+  /* height: 100%; */
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 1rem
 }
 
@@ -125,13 +125,13 @@ h4 {
 }
 
 table {
-  width: 100%;
+  /* width: 100%; */
   border-collapse: collapse;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 th, td {
-  padding: 1.5rem 3rem;
+  padding: 1rem 2rem;
 }
 
 th {

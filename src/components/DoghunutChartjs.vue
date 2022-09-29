@@ -38,7 +38,7 @@ export default {
     },
     height: {
       type: Number,
-      default: 100
+      default: 20
     },
     cssClasses: {
       default: '',

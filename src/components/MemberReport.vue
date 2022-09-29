@@ -2,15 +2,14 @@
 
           <div class="cont">
 
-            <div class="">
-                <div class="text-col">
+      
+                <div class="text-col gen">
                   <h4 class="title">Things you can do</h4>
                     <p>Add member</p>
                     <p>Send SMS</p>
                     <p>Record Payments</p>
                     <p>New contribution</p>
                 </div>
-            </div>
 
             <div class="income rounded gen">
                 <div class="text rounded d-flex flex-column justify-content-between position-relative">
@@ -39,15 +38,15 @@
                 </div>
             </div>
 
-            <div class="membership-sms d-flex align-items-center">
-                <div class=" membership rounded d-flex flex-column me-2 position-relative">
+            <div class="membership-sms">
+                <div class=" membership rounded box d-flex flex-column me-2 position-relative">
                    <img src="../assets/group.png" alt="" class="position-absolute end-0 p-2">
                   <h4 class="card-title mt-2 p-4">Membership</h4>
                     <h3 class="card-text px-4">568</h3>
                     <p class="m-4 text-success">PRO PLAN</p>
                 </div>
 
-                <div class=" sms-box rounded d-flex flex-column position-relative">
+                <div class=" sms-box rounded box d-flex flex-column ms-2 position-relative">
                    <img src="../assets/sms.png" alt="" class="position-absolute end-0 p-2">
                   <h4 class="card-title mt-2 p-4">SMS Units</h4>
                     <h3 class="card-text px-4">569</h3>
@@ -85,7 +84,7 @@ export default {
 
 
 .cont {
-  margin: 2rem 1rem 5rem;
+  margin: 2rem 0rem 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -95,13 +94,11 @@ export default {
 }
 
 .gen {
-  width: 230px;
+  width: 270px;
   min-width: 150px;
-  border: 1px solid red;
 }
 
 .text {
-  border: 1px solid #ddff76;
   height: 100%;
 }
 .card-title {
@@ -149,6 +146,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  /* order: 4; */
 }
 
 /* .text {
@@ -171,8 +169,46 @@ export default {
   letter-spacing: 0.5px;
 }
 
+.membership-sms {
+  display: flex;
+  justify-content: space-between;
+}
 
 
+@media (max-width: 991px) {
+ .gen {
+  width: 49%;
+  min-width: 150px;
+}
+.text-col {
+  order: 4;
+}
+
+.membership-sms {
+  width: 49%;
+}
+
+.box {
+  width: 50%;
+}
+}
+
+@media (max-width: 796px) {
+ .gen {
+  width: 100%;
+  min-width: 150px;
+}
+
+
+
+.box {
+  width: 50%;
+}
+
+.membership-sms {
+  width: 100%;
+}
+}
 
 
 

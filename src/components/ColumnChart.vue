@@ -1,6 +1,6 @@
 <template>
   <div class="container-fiuld">
-    <div :id="domId" style="height: 50vh"></div>
+    <div :id="domId" style="height: 100%"></div>
   </div>
 </template>
 

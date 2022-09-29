@@ -4,31 +4,36 @@
       <Sidebar />
     </div>
 
-    <div class="main-view">
-      <div class="content-holder">
-        <Nav />
-        <MemberReport />
-        <!-- </div> -->
-        <div class="chart container-fiuld">
-          <div class="chart-holder">
-            <ColumnChart />
-          </div>
+    <div class="content-holder">
+      <Nav />
+      <MemberReport />
 
-          <div class="chart-holder d-flex justify-content-center">
-            <PieChartjs />
-          </div>
+      <div class="chart-col">
+        <div class="pay">
+          <ColumnChart />
         </div>
-        <div class="table d-flex">
-          <div class="chart-holder">
-            <Latest />
-          </div>
-          <div class="chart-holder ms-5">
-            <Payment />
-          </div>
+
+        <div class="pay d-flex flex-column">
+          <h5 class="m-3">Income categories</h5>
+          <PieChartjs />
         </div>
-        <div class="footer">
-          <p>Lorem, ipsum dolor &copy;.</p>
+      </div>
+
+      <div class="trans">
+        <div class="pay">
+          <Latest />
         </div>
+        <div class="pay">
+          <Payment />
+        </div>
+        <div class="pay">
+          <Celebrant />
+        </div>
+      </div>
+      <div class="celebrant-section d-flex">
+      </div>
+      <div class="footer">
+        <p>Lorem, ipsum dolor &copy;.</p>
       </div>
     </div>
   </div>
@@ -40,9 +45,10 @@ import Nav from "../components/Navbar.vue";
 import Sidebar from "../components/SidebarNav.vue";
 import MemberReport from "../components/MemberReport.vue";
 import ColumnChart from "../components/ColumnData.vue";
-import PieChartjs from "../components/PieChartjs.vue";
+import PieChartjs from "../components/DoghunutChartjs.vue";
 import Latest from "../components/Latest-transaction.vue";
 import Payment from "../components/Top-payment.vue";
+import Celebrant from "../components/Celebrants.vue";
 import { ref } from "vue";
 
 export default {
@@ -55,6 +61,7 @@ export default {
     PieChartjs,
     Latest,
     Payment,
+    Celebrant,
   },
 
   setup() {},
@@ -68,34 +75,28 @@ export default {
   margin: 0;
 }
 
-.chart {
-  display: flex;
-  gap: 2rem;
-  width: 100%;
-  height: 500px;
-  /* border: 1px solid blue; */
-}
+  .home {
+    background-color: #70bd9421;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "sidebar sidebar . main main main main main main main main main main main";
+    /* justify-content: space-between; */
+    /* grid-template-columns: 5fr 8fr; */
+    gap: 1rem;
+    overflow: hidden;
+  }
 
-.chart-component,
-.chart-holder {
-  width: 50%;
-  height: 100%;
-  /* border: 1px solid red; */
-  background-color: #f9f9f9;
-  border: 1px solid rgba(233, 237, 235, 0.8);
-}
-.home {
-  background-color: #70bd9421;
-  width: 100%;
-  height: 100vh;
-  /* padding: 2.5rem 0 2.5rem 2.5rem; */
+.chart-col {
   display: flex;
-  gap: 2.5rem;
-  overflow: hidden;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .side-bar {
-  width: 15%;
+  /* width: 20%; */
   max-width: 273px;
   padding: 1.5rem 0 1rem;
   height: 100%;
@@ -103,16 +104,37 @@ export default {
   background-color: #f9f9f9;
   display: flex;
   justify-content: flex-end;
+  grid-area: sidebar;
+}
+  
+  .content-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2rem;
+    height: 100vh;
+    overflow: auto;
+    background-color: #fff;
+    grid-area: main;
+  }
+.trans {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.main-view {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  height: 100vh;
-  overflow: auto;
-  padding-bottom: 1rem;
+.content-holder::-webkit-scrollbar {
+  display: none;
+}
+
+.pay {
+  /* height: 100%; */
+  /* width: 100%; */
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid rgba(233, 237, 235, 0.8);
 }
 
 .footer {
@@ -123,51 +145,18 @@ export default {
   padding: 2rem 0;
 }
 
-.main-view::-webkit-scrollbar {
-  display: none;
-}
-
-.content-holder {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  padding: 2rem;
-  background-color: #fff;
-}
-
-.cav {
-  /* width: 200px;
-    height: 300px; */
-  display: flex;
-  gap: 2rem;
-  width: 100%;
-}
-
 @media (max-width: 991px) {
-  .side-bar {
-    display: none;
+  .side-bar  {
+    display: none
   }
-
-  .main-view {
-    width: 100%;
-  }
-
   .home {
-    padding: 0;
-    gap: 0;
+    grid-template-areas: 
+    "main";
   }
 }
 
-@media (max-width: 600px) {
-  .chart {
-    flex-wrap: wrap;
-  }
-  .cav {
-    flex-wrap: wrap;
-  }
-
-  .chart-component,
-  .chart-holder {
+@media (max-width: 650px) {
+  .pay {
     width: 100%;
   }
 }
