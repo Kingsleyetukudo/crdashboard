@@ -36,7 +36,7 @@
       <div class="celebrant-section d-flex">
       </div>
       <div class="footer">
-        <p>Lorem, ipsum dolor &copy;.</p>
+        <p> Memberly 2022 &copy;.</p>
       </div>
     </div>
   </div>
